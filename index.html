@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Cart Button</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="cart-button">
+        <span class="add-to-cart">Add to Cart</span>
+        <span class="added">Added</span>
+        <i class="fa-solid fa-cart-shopping"></i>
+        <i class="fa-solid fa-box"></i>
+    </button>
+    <script>
+        const cartButton = document.querySelectorAll('.cart-button')
+        cartButton.forEach(button=>{
+            button.addEventListener('click',cartClick)
+        })
+        function cartClick(){
+            let button =this;
+            button.classList.add('clicked')
+        }
+    </script>
+        <script src="https://kit.fontawesome.com/8e5023dc6e.js" crossorigin="anonymous"></script>
+</body>
+</html>
